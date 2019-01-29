@@ -38,6 +38,7 @@ public class JpaRunner2 implements ApplicationRunner {
 		Post post = session.get(Post.class, new Long(14));
 		
 		// 현재 테스트 버전에서 delete 시에 cascade.Persist 작동 안함 
+		// cacadeType.ALL 은 작동
 		System.out.println(post.getComments());
 		session.delete(post);
 	}
